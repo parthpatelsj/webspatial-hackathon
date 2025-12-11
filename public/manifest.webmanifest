@@ -1,7 +1,7 @@
 {
-  "name": "My Spatial App",
-  "short_name": "SpatialApp",
-  "start_url": "/",
+  "name": "WebSpatial Hackathon",
+  "short_name": "Hackathon",
+  "start_url": "/webspatial/avp/",
   "scope": "/",
   "display": "standalone",
   "icons": [
@@ -12,7 +12,7 @@
       "purpose": "any"
     },
     {
-      "src": "/icon-1024.png",
+      "src": "/icon-1024-maskable.png",
       "sizes": "1024x1024",
       "type": "image/png",
       "purpose": "maskable"
