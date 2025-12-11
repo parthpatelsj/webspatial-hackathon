@@ -1,41 +1,35 @@
-import { useState } from 'react'
 import './App.css'
-import { openScene } from './utils/xr'
+import { CartProvider } from './context/CartContext'
+import { ProductList } from './components/ProductList'
+import { Cart } from './components/Cart'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="app">
-      <header className="header">
-        <h1>Welcome to WebSpatial</h1>
-        <p className="subtitle">Build immersive spatial web apps for Apple Vision Pro</p>
-      </header>
+    <CartProvider>
+      <div className="app">
+        <header className="header">
+          <h1>WebSpatial Store</h1>
+          <p className="subtitle">Shop in immersive spatial reality</p>
+        </header>
 
-      <main className="main">
-        <div className="card">
-          <button onClick={() => setCount((count) => count + 1)}>
-            Count: {count}
-          </button>
-          <p>Click the button to test interactivity</p>
-        </div>
+        <main className="main">
+          <section className="products-section">
+            <h2>Products</h2>
+            <ProductList />
+          </section>
 
-        <div className="card">
-          <button
-            onClick={() => openScene('demo-scene', '/demo', { width: 800, height: 600 })}
-          >
-            Open Demo Scene
-          </button>
-          <p>Open a new spatial window</p>
-        </div>
-      </main>
+          <aside className="cart-section">
+            <Cart />
+          </aside>
+        </main>
 
-      <footer className="footer">
-        <p>
-          Built with <a href="https://webspatial.dev" target="_blank" rel="noopener noreferrer">WebSpatial</a> + React + Vite
-        </p>
-      </footer>
-    </div>
+        <footer className="footer">
+          <p>
+            Built with <a href="https://webspatial.dev" target="_blank" rel="noopener noreferrer">WebSpatial</a> + React
+          </p>
+        </footer>
+      </div>
+    </CartProvider>
   )
 }
 
