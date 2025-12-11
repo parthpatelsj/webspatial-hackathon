@@ -24,7 +24,6 @@
     "@webspatial/builder": "^1.0.5",
     "@webspatial/platform-visionos": "^1.0.5",
     "@webspatial/vite-plugin": "^0.2.1",
-    "vite-plugin-html": "^3.2.2",
-    "vite-plugin-mkcert": "^1.17.9"
+    "vite-plugin-html": "^3.2.2"
   }
 }
